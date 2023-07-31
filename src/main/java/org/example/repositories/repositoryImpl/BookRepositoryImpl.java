@@ -24,6 +24,10 @@ public class BookRepositoryImpl implements BookRepository {
         if (book!=null){
             book.setAuthor(author);
             entityManager.getTransaction();
+        }else {
+            entityManager.getTransaction().rollback();
+            entityManager.close();
+            return "Book with ID " + bookId + " not found!";
         }
         entityManager.getTransaction().commit();
         entityManager.close();

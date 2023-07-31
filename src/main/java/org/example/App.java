@@ -111,7 +111,7 @@ public class App {
                     bookService.saveBook(book);
                 }
                 case "13" ->{
-                    bookService.updateBookAuthor();
+                    bookService.updateBookAuthor(3L,new Author("Mike","Meyers","mike@gmail.com",LocalDate.of(1923,8,10),"Austria",Gender.valueOf("MALE")));
                 }
 
 
