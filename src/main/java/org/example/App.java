@@ -40,6 +40,9 @@ public class App {
                     Press to 10 to assign the Authors to Publishers
                     Press to 11 to get Authors from Publishers
                     Press to 12 to save the Book with Author's
+                    Press to 13 to update Author of Book
+                    Press to 14 to get Books and Publishers by Book's ID
+                    Press to 15 to delete Book by Author's ID
                     """);
             switch (new Scanner(System.in).nextLine()) {
                 case "1" -> {
