@@ -70,7 +70,6 @@ public class AuthorRepositoryImpl implements AuthorRepository {
         Publisher publisher = entityManager.find(Publisher.class, publisherId);
         authors.add(author);
         publishers.add(publisher);
-
         publisher.setAuthor(authors);
         author.setPublishers(publishers);
         entityManager.getTransaction().commit();

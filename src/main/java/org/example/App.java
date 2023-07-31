@@ -111,7 +111,15 @@ public class App {
                     bookService.saveBook(book);
                 }
                 case "13" ->{
-                    bookService.updateBookAuthor(3L,new Author("Mike","Meyers","mike@gmail.com",LocalDate.of(1923,8,10),"Austria",Gender.valueOf("MALE")));
+                    bookService.updateBookAuthor(3L,6L);
+                }
+                case "14" ->{
+                    System.out.print("Input the book's ID to get the Publishers: ");
+                    System.out.println(bookService.getBookAndPublisherByBookId(new Scanner(System.in).nextLong()));
+                }
+                case "15" -> {
+                    System.out.print("Input the Author's ID to delete the book: ");
+                    bookService.deleteBookByAuthorId(new Scanner(System.in).nextLong());
                 }
 
 
